@@ -11,7 +11,7 @@ public class Vehicle {
     private String name;
     private String brand;
     private String chassi;
-    private int qtywheels;
+    protected int qtywheels;
     private float qtyFuel = 0;
 
     public String getName() {
