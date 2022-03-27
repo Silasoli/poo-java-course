@@ -1,5 +1,7 @@
 package model;
 
+import exceptions.ChassiExceptions;
+
 /**
  *
  * @author silas
@@ -32,8 +34,13 @@ public class Vehicle {
         return chassi;
     }
 
-    public void setChassi(String chassi) {
-        this.chassi = chassi;
+    public void setChassi(String chassi) throws ChassiExceptions {
+        if(chassi.length()==17){
+            this.chassi = chassi;
+        } else {
+            throw new ChassiExceptions(chassi);
+        }
+        
     }
 
     public int getQtywheels() {

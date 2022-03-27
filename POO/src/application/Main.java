@@ -1,5 +1,6 @@
 package application;
 
+import exceptions.ChassiExceptions;
 import model.Vehicle;
 
 /**
@@ -8,19 +9,24 @@ import model.Vehicle;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ChassiExceptions {
 
-        Vehicle vehicle1 = new Vehicle();
+        try {
+            Vehicle vehicle1 = new Vehicle();
 
-        vehicle1.setName("Lancer 2.0 Evolution X 4x4 16v Turbo");
-        vehicle1.setBrand("Mitsubishi");
-        vehicle1.setChassi("753 AAlYEr 0g 8y9730");
-        vehicle1.setQtywheels(4);
-        
-        vehicle1.supplyFuel(10);
+            vehicle1.setName("Lancer 2.0 Evolution X 4x4 16v Turbo");
+            vehicle1.setBrand("Mitsubishi");
+            vehicle1.setChassi("753 AAlYEr 0g 8y9730");
+            vehicle1.setQtywheels(4);
 
-        System.out.println(vehicle1);
-        vehicle1.turnOn();
+            vehicle1.supplyFuel(10);
+
+            System.out.println(vehicle1);
+            vehicle1.turnOn();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+
+        }
 
     }
 
