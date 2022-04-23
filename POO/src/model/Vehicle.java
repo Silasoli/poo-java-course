@@ -11,7 +11,7 @@ public class Vehicle {
     private String name;
     private String brand;
     private String chassi;
-    protected int qtywheels;
+    protected int qtyWheels;
     private float qtyFuel = 0;
 
     public String getName() {
@@ -43,12 +43,12 @@ public class Vehicle {
         
     }
 
-    public int getQtywheels() {
-        return qtywheels;
+    public int getQtyWheels() {
+        return qtyWheels;
     }
 
-    public void setQtywheels(int qtywheels) {
-        this.qtywheels = qtywheels;
+    public void setQtywheels(int qtyWheels) {
+        this.qtyWheels = qtyWheels;
     }
 
     public float getQtyFuel() {
@@ -72,6 +72,6 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "Nome: " + name + "\n" + "Marca: " + brand + "\n" + "Chassi: " + chassi + "\n" + "Quantidade de rodas: " + qtywheels+"\n"+ "Quantidade de gasolina: "+qtyFuel;
+        return "Nome: " + name + "\n" + "Marca: " + brand + "\n" + "Chassi: " + chassi + "\n" + "Quantidade de rodas: " + qtyWheels+"\n"+ "Quantidade de gasolina: "+qtyFuel;
     }
 }

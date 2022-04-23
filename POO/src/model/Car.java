@@ -12,28 +12,38 @@ import exceptions.ChassiExceptions;
  */
 public class Car extends Vehicle {
 
+    private int qtyDoors;
+
     public Car() {
-        this.qtywheels = 4;
+        this.qtyWheels = 4;
     }
     //public Car(String name, float value) {}
 
     //public Car(float km, String name) {}
     public Car(String name, String brand) {
-        this.qtywheels = 4;
+        this.qtyWheels = 4;
         this.setName(name);
         this.setBrand(brand);
     }
 
     public Car(String name, String brand, String chassi) throws ChassiExceptions {
-        this.qtywheels = 4;
+        this.qtyWheels = 4;
         this.setName(name);
         this.setBrand(brand);
         this.setChassi(chassi);
     }
 
+    public int getQtyDoors() {
+        return qtyDoors;
+    }
+
+    public void setQtyDoors(int qtyDoors) {
+        this.qtyDoors = qtyDoors;
+    }
+
     @Override
     public String toString() {
-        return "Nome: " + getName() + "\n" + "Marca: " + getBrand() + "\n" + "Chassi: " + getChassi() + "\n" + "Quantidade de rodas: " + getQtywheels() + "\n" + "Quantidade de gasolina: " + getQtyFuel();
+        return "Nome: " + getName() + "\n" + "Marca: " + getBrand() + "\n" + "Chassi: " + getChassi() + "\n" + "Quantidade de rodas: " + getQtyWheels() + "\n" + "Quantidade de gasolina: " + getQtyFuel();
     }
 
 }
